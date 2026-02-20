@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Tuto</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}" />
+</head>
+
+<body>
+
+  <!-- -->
+  <!-- En-tête de page - barre de navigation -->
+  <!-- -->
+  <header class="sticky-top">
+    <nav class="bg-success" style="height: 3rem;"></nav>
+  </header>
+
+  <!-- -->
+  <!-- Contenu de la page -->
+  <!-- -->
+  <section class="container my-3">
+    <div class="row">
+
+      <!-- Colonne 1 -->
+      <div class="col-12 col-sm-6 ps-lg-5 d-flex flex-column Xjustify-content-center">
+
+        <!-- Titre en haut de la page -->
+        <h2 class="text-center">Connexion</h2>
+
+        <!-- Espacement vertical -->
+        <div class="py-2 py-lg-4"></div>
+
+        <!-- Ajustement en largeur -->
+        <div class="mx-auto" style="max-width: 30rem;">
+
+          <!-- Formulaire de saisie -->
+          <form class="mb-auto" th:action="@{/hello}" method="get">
+
+            <!-- Identifiant -->
+            <div class="row my-4">
+              <div class="col-12 col-xl-5">
+                <label for="username" class="form-label">Identifiant</label>
+              </div>
+              <div class="col">
+                <input type="text" id="username" class="form-control" name="username" required autofocus></input>
+              </div>
+            </div>
+
+            <!-- Mot de passe -->
+            <div class="row my-4">
+              <div class="col-12 col-xl-5">
+                <label for="password" class="col-form-label">Mot de passe</label>
+              </div>
+              <div class="col">
+                <div class="input-group">
+                  <input type="password" id="password" th:value="${password}" class="form-control" name="password"
+                    required></input>
+                  <button type="button" class="input-group-text btn-link" onclick="showHidehPassword()">
+                    <i id="eyeIcon" class="bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Boutons en bas du formulaire -->
+            <div class="text-center mt-4 mt-xl-5 mb-5">
+              <input type="submit" class="btn btn-primary" value="Se connecter">
+            </div>
+
+          </form> <!-- Fin Formulaire de saisie -->
+
+        </div> <!-- Fin Ajustement en largeur -->
+
+      </div> <!-- Fin Colonne 1 -->
+
+      <!-- Colonne 2, photo -->
+      <div class="col-12 col-sm-6 my-3 d-flex align-items-center justify-content-center">
+        <img class="img-fluid" src="img/photos/photo02.jpg">
+      </div> <!-- Fin Colonne 2 -->
+
+    </div>
+  </section> <!-- Fin Contenu de la page -->
+
+  <!-- -->
+  <!-- Pied de page -->
+  <!-- -->
+  <footer>
+    <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">© La Cantine</div>
+  </footer>
+
+  <script>
+    function showHidehPassword() {
+      var input = document.getElementById('password')
+      var icon = document.getElementById('eyeIcon')
+      if (input.type == 'password') {
+        input.type = 'text'
+        icon.classList.replace('bi-eye', "bi-eye-slash")
+      } else {
+        input.type = 'password'
+        icon.classList.replace("bi-eye-slash", 'bi-eye')
+      }
+    }
+  </script>
+
+</body>
+
+</html>

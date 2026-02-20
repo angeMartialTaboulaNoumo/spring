@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-StartWebServer<tuto>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "tuto.StartWebServer",
+      "projectName": "tuto",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "encoding": "CP850",
+    }
+  ]
+}

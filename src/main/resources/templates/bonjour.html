@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonjour - Tuto</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}" />
+</head>
+
+<body>
+
+  <!-- -->
+  <!-- En-tête de page - barre de navigation -->
+  <!-- -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-nav bg-success navbar-dark" style="height: 3rem;">
+      <a class="nav-link" th:href="@{/}">Se déconnecter</a>
+    </nav>
+  </header>
+
+  <!-- -->
+  <!-- Contenu de la page -->
+  <!-- -->
+  <section class="container my-3">
+    <div class="row">
+
+      <!-- Colonne 1 -->
+      <div class=" col-12 col-sm-6 ps-lg-5 d-flex flex-column justify-content-center" style="min-height: 16rem;">
+        <h1 class="text-center">Bonjour Tika !</h1>
+      </div> <!-- Fin Colonne 1 -->
+
+      <!-- Colonne 2, photo -->
+      <div class="col-12 col-sm-6 my-3 d-flex align-items-center justify-content-center">
+        <img class="img-fluid" src="img/photos/photo01.jpg">
+      </div> <!-- Fin Colonne 2 -->
+
+    </div>
+  </section> <!-- Fin Contenu de la page -->
+
+  <!-- -->
+  <!-- Pied de page -->
+  <!-- -->
+  <footer>
+    <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">© La Cantine</div>
+  </footer>
+
+</body>
+
+</html>
