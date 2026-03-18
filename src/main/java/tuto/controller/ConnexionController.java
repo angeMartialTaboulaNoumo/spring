@@ -1,6 +1,7 @@
 package tuto.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
@@ -12,8 +13,15 @@ public class ConnexionController {
 	}
 
 	@GetMapping( "/connect" )
-	public String page2() {
-		return "/connexion/bonjour.html";
+	public String page2(String username, String password, Model model) {
+		var sb = new StringBuilder( username );
+		if ( sb.reverse().toString().equals( password ) ) {
+			model.addAttribute( "connected", "Bonjour\t"+username );
+			return "connexion/bonjour.html";
+		} else {
+			model.addAttribute( "alert", "mot de passe incorrect" );
+			return "connexion/home.html";
+		}
 	}
 
 }
