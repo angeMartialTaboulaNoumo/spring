@@ -1,22 +1,14 @@
 <!doctype html>
 <html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion - Tuto</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}" />
-</head>
+<head th:replace="~{ _fragments/layout.html :: head('Connexion') }"></head>
 
 <body>
 
   <!-- -->
   <!-- En-tête de page - barre de navigation -->
   <!-- -->
-  <header class="sticky-top">
-    <nav class="bg-success" style="height: 3rem;"></nav>
-  </header>
+  <header th:replace="~{ _fragments/layout.html :: header }"></header>
 
   <!-- -->
   <!-- Contenu de la page -->
@@ -87,9 +79,8 @@
   <!-- -->
   <!-- Pied de page -->
   <!-- -->
-  <footer>
-    <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">© La Cantine</div>
-  </footer>
+  <footer th:replace="~{ _fragments/layout.html :: footer }"></footer>
+
 
   <script>
     function showHidehPassword() {

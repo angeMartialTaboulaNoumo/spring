@@ -1,0 +1,17 @@
+<footer th:fragment="footer">
+  <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">© La Cantine</div>
+</footer>
+
+<header class="sticky-top" th:fragment="header">
+  <nav class="navbar navbar-nav bg-success navbar-dark" style="height: 3rem;">
+    <a class="nav-link" th:href="@{/disconnect}" th:if="${connected}">deconnecter</a>
+  </nav>
+</header>
+
+<head th:fragment="head(titre)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${titre}+' - Tuto' ">Bonjour - Tuto</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}" />
+</head>

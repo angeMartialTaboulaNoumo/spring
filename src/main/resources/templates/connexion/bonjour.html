@@ -1,24 +1,14 @@
 <!doctype html>
 <html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bonjour - Tuto</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}" />
-</head>
+<head th:replace="~{ _fragments/layout.html :: head('Bonjour') }"></head>
 
 <body>
 
   <!-- -->
   <!-- En-tête de page - barre de navigation -->
   <!-- -->
-  <header class="sticky-top">
-    <nav class="navbar navbar-nav bg-success navbar-dark" style="height: 3rem;">
-      <a class="nav-link" th:href="@{/}">Se déconnecter</a>
-    </nav>
-  </header>
+  <header th:replace="~{ _fragments/layout.html :: header }"></header>
 
   <!-- -->
   <!-- Contenu de la page -->
@@ -42,9 +32,7 @@
   <!-- -->
   <!-- Pied de page -->
   <!-- -->
-  <footer>
-    <div class="bg-dark text-bg-dark pt-2 pb-5 text-center">© La Cantine</div>
-  </footer>
+  <footer th:replace="~{ _fragments/layout.html :: footer }"></footer>
 
 </body>
 
