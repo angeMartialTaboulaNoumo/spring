@@ -4,7 +4,11 @@
 
 <header class="sticky-top" th:fragment="header">
   <nav class="navbar navbar-nav bg-success navbar-dark" style="height: 3rem;">
-    <a class="nav-link" th:href="@{/disconnect}" th:if="${connected}">deconnecter</a>
+
+    <form action="" method="post" th:if="${connected}" th:action="@{/disconnect}">
+      <button role="submit" class="nav-link">Se déconnecter</button>
+    </form>
+
   </nav>
 </header>
 
